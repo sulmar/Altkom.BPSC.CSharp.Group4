@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.BPSC.CSharp.Shop.Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.BPSC.CSharp.Shop.ConsoleClient", "Altkom.BPSC.CSharp.Shop.ConsoleClient\Altkom.BPSC.CSharp.Shop.ConsoleClient.csproj", "{B72AF602-CC24-4CC1-B820-6F5D9EEDF1CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.BPSC.CSharp.Shop.UnitTests", "Altkom.BPSC.CSharp.Shop.UnitTests\Altkom.BPSC.CSharp.Shop.UnitTests.csproj", "{2CF2CAA7-5DC6-4CAD-AACC-F4E5FD1CA75B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.BPSC.CSharp.Shop.OrderCalculators", "Altkom.BPSC.CSharp.Shop.OrderCalculators\Altkom.BPSC.CSharp.Shop.OrderCalculators.csproj", "{3FBE3B21-A374-4C34-B6BB-7AB5E8C27834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.BPSC.CSharp.Shop.IServices", "Altkom.BPSC.CSharp.Shop.IServices\Altkom.BPSC.CSharp.Shop.IServices.csproj", "{A5896CB7-C698-4C61-8181-01FCED4B81EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{B72AF602-CC24-4CC1-B820-6F5D9EEDF1CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B72AF602-CC24-4CC1-B820-6F5D9EEDF1CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B72AF602-CC24-4CC1-B820-6F5D9EEDF1CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF2CAA7-5DC6-4CAD-AACC-F4E5FD1CA75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF2CAA7-5DC6-4CAD-AACC-F4E5FD1CA75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF2CAA7-5DC6-4CAD-AACC-F4E5FD1CA75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF2CAA7-5DC6-4CAD-AACC-F4E5FD1CA75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FBE3B21-A374-4C34-B6BB-7AB5E8C27834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBE3B21-A374-4C34-B6BB-7AB5E8C27834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBE3B21-A374-4C34-B6BB-7AB5E8C27834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBE3B21-A374-4C34-B6BB-7AB5E8C27834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5896CB7-C698-4C61-8181-01FCED4B81EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5896CB7-C698-4C61-8181-01FCED4B81EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5896CB7-C698-4C61-8181-01FCED4B81EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5896CB7-C698-4C61-8181-01FCED4B81EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

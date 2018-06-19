@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B72AF602-CC24-4CC1-B820-6F5D9EEDF1CA}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Altkom.BPSC.CSharp.Shop.ConsoleClient</RootNamespace>
-    <AssemblyName>Altkom.BPSC.CSharp.Shop.ConsoleClient</AssemblyName>
+    <ProjectGuid>{A5896CB7-C698-4C61-8181-01FCED4B81EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Altkom.BPSC.CSharp.Shop.IServices</RootNamespace>
+    <AssemblyName>Altkom.BPSC.CSharp.Shop.IServices</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,14 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DateTimeHelper.cs" />
-    <Compile Include="ItemFactory.cs" />
-    <Compile Include="Printer.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="IProductsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Altkom.BPSC.CSharp.Shop.Models\Altkom.BPSC.CSharp.Shop.Models.csproj">

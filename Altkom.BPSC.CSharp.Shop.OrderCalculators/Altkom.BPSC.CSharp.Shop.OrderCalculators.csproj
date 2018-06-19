@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B72AF602-CC24-4CC1-B820-6F5D9EEDF1CA}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Altkom.BPSC.CSharp.Shop.ConsoleClient</RootNamespace>
-    <AssemblyName>Altkom.BPSC.CSharp.Shop.ConsoleClient</AssemblyName>
+    <ProjectGuid>{3FBE3B21-A374-4C34-B6BB-7AB5E8C27834}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Altkom.BPSC.CSharp.Shop.OrderCalculators</RootNamespace>
+    <AssemblyName>Altkom.BPSC.CSharp.Shop.OrderCalculators</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,14 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DateTimeHelper.cs" />
-    <Compile Include="ItemFactory.cs" />
-    <Compile Include="Printer.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="IOrderCalculator.cs" />
+    <Compile Include="OrderCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Altkom.BPSC.CSharp.Shop.Models\Altkom.BPSC.CSharp.Shop.Models.csproj">

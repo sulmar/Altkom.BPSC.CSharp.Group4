@@ -41,6 +41,31 @@ namespace Altkom.BPSC.CSharp.Shop.Models
 
         public List<OrderDetail> Details { get; set; }
 
+
+        //public decimal TotalAmount
+        //{
+        //    get
+        //    {
+        //        decimal totalAmount = 0;
+
+        //        foreach (OrderDetail detail in Details)
+        //        {
+        //            totalAmount += detail.Amount;
+        //        }
+
+        //        return totalAmount;
+        //    }
+
+        //}
+
+        public decimal TotalAmount
+        {
+            get
+            {
+                return Details.Sum(detail => detail.Amount);
+            }
+        }
+
         public Order()
         {
             Details = new List<OrderDetail>();

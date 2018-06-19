@@ -13,6 +13,14 @@ namespace Altkom.BPSC.CSharp.Shop.ConsoleClient
     {
         static void Main(string[] args)
         {
+            DateTimeHelper.IsHoliday(DateTime.Today);
+
+            DateTime.Today.IsHoliday();
+
+            Printer printer = new Printer();
+
+            printer.Print(DateTime.Now);
+
             CreateOrderTest();
         }
 
