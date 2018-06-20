@@ -15,6 +15,8 @@ namespace Altkom.BPSC.CSharp.Shop.ConsoleClient
         }
     }
 
+
+    // Metoda rozszerzająca
     public static class DateTimeExtensions
     {
         public static bool IsHoliday(this DateTime dateTime)
