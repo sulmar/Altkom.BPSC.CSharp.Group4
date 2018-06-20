@@ -10,47 +10,6 @@ using System.Threading.Tasks;
 
 namespace Altkom.BPSC.CSharp.Shop.ConsoleClient
 {
-   
-    class Message
-    {
-        public string From { get; set; }
-        public string To { get; set; }
-        public string Content { get; set; }
-    }
-
-    
-
-    public interface ICommand
-    {
-        void Execute();
-
-        bool CanExecute();
-    }
-
-    class SendMessageCommand : ICommand
-    {
-        private readonly Message message;
-
-        public SendMessageCommand(Message message)
-        {
-            this.message = message;
-        }
-
-        public void Execute()
-        {
-            if (CanExecute())
-            {
-                Console.WriteLine($"{message.From} -> {message.To} : {message.Content}");
-            }
-        }
-
-        public bool CanExecute()
-        {
-            return !string.IsNullOrEmpty(message.From)
-                && !string.IsNullOrEmpty(message.To);
-        }
-       
-    }
 
     class Program
     {
@@ -151,10 +110,9 @@ namespace Altkom.BPSC.CSharp.Shop.ConsoleClient
                 // code
             }
 
+            // lock tłumaczony jest do zapisu w następującej postaci:
             Monitor.Enter(syncLock);
-
             // code
-
             Monitor.Exit(syncLock);
         }
 

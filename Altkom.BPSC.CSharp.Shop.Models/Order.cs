@@ -9,21 +9,6 @@ using System.Threading.Tasks;
 
 namespace Altkom.BPSC.CSharp.Shop.Models
 {
-    public enum OrderStatus
-    {
-        Created,
-        Completing,
-        Sent,
-        Delivered,
-        Canceled
-    }
-
-    public enum OrderTrigger
-    {
-        Complete,
-        Send,
-        Cancel
-    }
 
     public class Order : Base
     {
@@ -103,7 +88,6 @@ namespace Altkom.BPSC.CSharp.Shop.Models
             Details = new List<OrderDetail>();
 
             CreateDate = DateTime.Now;
-            // Status = OrderStatus.Created;
 
             machine = new StateMachine<OrderStatus, OrderTrigger>(OrderStatus.Created);
 
