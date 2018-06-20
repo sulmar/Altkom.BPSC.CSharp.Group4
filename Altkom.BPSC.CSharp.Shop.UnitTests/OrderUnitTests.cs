@@ -8,6 +8,28 @@ namespace Altkom.BPSC.CSharp.Shop.UnitTests
     [TestClass]
     public class OrderUnitTests
     {
+
+        [TestMethod]
+        public void StateMachineTest()
+        {
+            Order order = new Order();
+
+            Assert.AreEqual(OrderStatus.Created, order.Status);
+
+            order.Complete();
+
+            Assert.AreEqual(OrderStatus.Completing, order.Status);
+
+            order.SentBox();
+
+            Assert.AreEqual(OrderStatus.Sent, order.Status);
+
+            order.Cancel();
+
+
+        }
+
+
         [TestMethod]
         public void CreateOrderTest()
         {

@@ -1,11 +1,30 @@
-﻿using System;
+﻿using Stateless;
+using Stateless.Graph;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Altkom.BPSC.CSharp.Shop.Models
 {
+    public enum OrderStatus
+    {
+        Created,
+        Completing,
+        Sent,
+        Delivered,
+        Canceled
+    }
+
+    public enum OrderTrigger
+    {
+        Complete,
+        Send,
+        Cancel
+    }
+
     public class Order : Base
     {
         // back field
@@ -39,6 +58,8 @@ namespace Altkom.BPSC.CSharp.Shop.Models
 
         public Customer Customer { get; set; }
 
+        // public OrderStatus Status { get; set; }
+
         public List<OrderDetail> Details { get; set; }
 
 
@@ -66,11 +87,53 @@ namespace Altkom.BPSC.CSharp.Shop.Models
             }
         }
 
+        private StateMachine<OrderStatus, OrderTrigger> machine;
+
+        public OrderStatus Status
+        {
+            get
+            {
+                return machine.State;
+            }
+        }
+           
+
         public Order()
         {
             Details = new List<OrderDetail>();
 
             CreateDate = DateTime.Now;
+            // Status = OrderStatus.Created;
+
+            machine = new StateMachine<OrderStatus, OrderTrigger>(OrderStatus.Created);
+
+            machine.Configure(OrderStatus.Created)
+                .Permit(OrderTrigger.Complete, OrderStatus.Completing)
+                .OnEntry(() => Console.WriteLine("Trwa kompletacja"));
+
+            machine.Configure(OrderStatus.Completing)
+                .Permit(OrderTrigger.Send, OrderStatus.Sent)
+                .Permit(OrderTrigger.Cancel, OrderStatus.Canceled)
+                ;
+
+            string graph = UmlDotGraph.Format(machine.GetInfo());
+
+            Trace.WriteLine(graph);
+        }
+
+        public void Complete()
+        {
+            machine.Fire(OrderTrigger.Complete);
+        }
+
+        public void SentBox()
+        {
+            machine.Fire(OrderTrigger.Send);
+        }
+
+        public void Cancel()
+        {
+            machine.Fire(OrderTrigger.Cancel);
         }
 
         // Konstruktor bezparametryczny
